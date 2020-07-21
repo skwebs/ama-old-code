@@ -1,0 +1,35 @@
+header {
+	background: linear-gradient(hsla(210,17%,98%,0.95),hsla(210,17%,98%,0.95)), url("../img/ama/ama-old-512x512.png") center/contain no-repeat;
+}
+
+@media (min-width: 768px) {
+	header {
+		background: none;
+	}
+}
+
+.header hr {
+	background: linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,1),rgba(0,0,0,0));
+	height: 2px;
+	width: 60%;
+}
+
+.header__bg-img {
+	overflow: hidden;
+	height: 100%;
+	opacity: .95;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: -1;
+}
+
+.header__side-img {
+	height: 150px;
+}
+
+@media (max-width:768px) {
+/* goes to responsive.css*/
+}

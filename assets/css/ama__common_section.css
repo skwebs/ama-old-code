@@ -1,0 +1,444 @@
+/* style-1.css */
+//@charset 'UTF-8';
+
+
+/* ama__header.css */ 
+/*.slide__menu-wrapper  {z-index:6 !important;}*/
+.slide__menu-wrapper {box-shadow:0 2px 10px 2px hsla(0,0%,0%,0.25) ; }
+header{
+background:linear-gradient(hsla(210,17%,98%,0.95),hsla(210,17%,98%,0.95)), url("../img/ama/ama-old-512x512.png") center/contain  no-repeat;
+olor:var(--purple);
+}
+@media (min-width: 768px) {
+	header{
+		background:none;
+	}
+
+}
+.header hr{
+	background:linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,1),rgba(0,0,0,0)) !important;
+	height:2px;width:60%;
+}
+.header{
+
+}
+.header__bg-img{
+	overflow:hidden;
+	height:100%;
+	opacity:.95;
+	position: absolute;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	z-index:-1;
+}
+.header__side-img {
+	height:150px;
+}
+
+/* ama__sidebar.css*/
+
+/* sidebar overlay */
+.sidebar-overlay{
+	position:fixed;
+	top:0;
+	bottom:0;
+	left:0;
+	right:0;
+	background:hsla(0,0%,0%,0.5);
+	z-index:9998;
+	display:none;
+}
+/* whole sidebar */ 
+.sidebar{
+	position:fixed;
+	top:0 ;
+	bottom:0;
+	left:0;
+	z-index:9999;
+	width:300px ;
+	height:100vh;
+	box-shadow:0 0 10px hsla(0,0%,0%,0.35);
+	background:#fff !important;
+	transform:translateX(-100%);
+}
+
+/*.sidebar{
+	background: linear-gradient(hsla(0,0%,100% ,1) 30%, hsla(0,0%,100%,0.75)),
+	 url("../../assets/img/ama/ama-n-bg-white.jpg") 
+	 left/300px repeat-y border-box fixed;
+}
+/* use for desktop navigation
+.sidebar__desktop{
+	width:250px ;
+	left:0;
+}
+*/
+/* sidebar header */
+.sidebar-header {
+	height:100px;
+	width:100%;
+	background:var(--primary);
+}
+.sidebar-header div {
+	float:left;
+}
+.sidebar-header div:nth-child(2)  *{
+	margin:0;
+	vertical-align:middle;
+	color:#fff;
+}
+.sidebar-header-img{
+display:inline-block;
+border-right:3px solid #fff;
+height:100%;}
+.sidebar-header img{height:100%;}
+
+
+
+
+/* sidebar menu */
+.sidebar-menu .navbar {
+	padding:0px 0 !important;
+/*	transform:all 0.3s;*/
+}
+
+.sidebar-menu .navbar-nav li.nav-item {
+	width:300px;
+	border-top: 1px solid;
+	border-image: 
+	linear-gradient(to right, hsla(0,100%,0%,0),hsla(0,100%,0%,0.5),hsla(0,100%,0%,0)) 100 5% ;
+	/*border-image: linear-gradient(to right, hsla(0,100%,0%,0),hsla(0,100%,0%,0.15),hsla(0,100%,0%,0)) 100 5% ;*/
+}
+
+.sidebar-menu .navbar-nav li + li {
+	border-top:1px solid #ddd;
+}
+
+.sidebar-menu .navbar-nav li a{
+	padding:8px 0;
+	width:100%;
+	padding: 10px 30px;
+}
+
+/* sidebar dropdown */
+.sidebar-menu .dropdown-menu {
+	border: unset;
+	border-radius: unset;
+	padding:0;
+	margin:0;
+}
+.sidebar-menu .dropdown-toggle::after{
+	position:absolute;
+	right:20px;
+	display: inline-block;
+	font: normal normal normal 14px/1 FontAwesome;
+	font-size: inherit;
+	text-rendering: auto;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	content:"\f078";
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 0;
+	border-left: 0;
+	vertical-align: 0;
+	/*min-width:16px;*/
+	transform:translateY(3px);
+	transition:all .2s ease-in-out;
+}
+.sidebar-menu .active.dropdown-toggle::after{
+	/*transform:rotateZ(180deg) translateY(-3px);*/
+	transform:rotateZ(-90deg) translateY(0px);
+}
+.sidebar-menu .dropdown-menu {
+	background:#f7f5f2;
+}
+sidebar-menu .dropdown-menu .dropdown-item{
+	color:#fff;
+}
+.sidebar-menu .dropdown-menu a {
+	border-top: 1px solid;
+	border-image: 
+	linear-gradient(to right, hsla(0,100%,0%,0),hsla(0,100%,0%,0.5),hsla(0,100%,0%,0)) 100 5% ;
+}
+
+.sidebar-social a{
+	position:relative;
+	display:block;
+	width:40px;
+	height:40px;
+	text-align:center;
+	line-height:40px;
+	background:#fff;
+	font-size:1.25rem;
+	border-radius:50%;
+	-webkit-transition: all .25s;
+	transition:all .25s;
+	z-index:1;
+	margin:0 5px;
+	box-shadow:2px 2px 5px 2px hsla(0,0%,0%,0.15);
+}
+.sidebar-social a:before{
+	content:"";
+	position:absolute;
+	top:0;left:0;
+	width:40px;
+	height:40px;
+	border-radius:50%;
+	transition:all .2s;
+	transform: scale(0);
+	z-index:-1;
+}
+.sidebar-social a:hover{
+	color:#fff;
+}
+.sidebar-social a:hover:before{
+	transform: scale(1);
+}
+/*facebook*/
+.sidebar-social .sb-fb:before{
+	background:#3b5998;
+}
+/* twitter */
+.sidebar-social .sb-tw:before{
+	background:#00acee;
+}
+/* instagram */
+.sidebar-social .sb-insta:before{
+	background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+/* youtube */
+.sidebar-social .sb-yt:before{
+	background:#fe0000;
+}
+	
+/*
+    |-------------------–------------------------
+    | c-hamburger.css part
+    |--------------------------------------------
+    */
+    :root{
+    --hamburger-color:#0275d8;
+    }
+    .hamburger {
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    transition-property: opacity, filter;
+    transition-duration: 0.15s;
+    transition-timing-function: linear;
+    font: inherit;
+    color: inherit;
+    text-transform: none;
+    background-color: transparent;
+    border: 0;
+    margin: 0;
+    overflow: visible; 
+    }
+    /*.hamburger:hover {
+    opacity: 0.7; 
+    }
+    .hamburger.is-active:hover {
+    opacity: 0.7; 
+    }*/
+    .hamburger.is-active .hamburger-inner,
+    .hamburger.is-active .hamburger-inner::before,
+    .hamburger.is-active .hamburger-inner::after {
+    background-color:var(--hamburger-color);
+    }
+    
+    .hamburger-box {
+    width: 24px;
+    height: 12px;
+    display: inline-block;
+    position: relative; 
+    }
+    
+    .hamburger-inner {
+    display: block;
+    top: 50%;
+    margin-top: 0px; 
+    }
+    .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    width: 24px;
+    height: 2px;
+    background-color:var(--hamburger-color);
+    border-radius: 4px;
+    position: absolute;
+    transition-property: transform;
+    transition-duration: 0.15s;
+    transition-timing-function: ease; }
+    .hamburger-inner::before, .hamburger-inner::after {
+    content: "";
+    display: block; 
+    }
+    .hamburger-inner::before {
+    top: -8px; 
+    }
+    .hamburger-inner::after {
+    bottom: -8px; 
+    }
+    
+    /*
+    For more design go - https://github.com/jonsuh/hamburgers/blob/master/dist/hamburgers.css
+    */
+    
+    /* Arrow Alt */
+    .hamburger--arrowalt .hamburger-inner::before {
+    transition: top 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); 
+    }
+    .hamburger--arrowalt .hamburger-inner::after {
+    transition: bottom 0.1s 0.1s ease, transform 0.1s cubic-bezier(0.165, 0.84, 0.44, 1); 
+    }
+    .hamburger--arrowalt.is-active .hamburger-inner::before {
+    top: 0;
+    /*transform: translate3d(-8px, -10px, 0) rotate(-45deg) scale(0.7, 1);*/
+    transform: translate3d(-6px, -5.5px, 0) rotate(-45deg) scale(0.7, 1);
+    transition: top 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); 
+    }
+    .hamburger--arrowalt.is-active .hamburger-inner::after {
+    bottom: 0;
+    /*transform: translate3d(-8px, 10px, 0) rotate(45deg) scale(0.7, 1);*/
+    transform: translate3d(-6px, 5.5px, 0) rotate(45deg) scale(0.7, 1);
+    transition: bottom 0.1s ease, transform 0.1s 0.1s cubic-bezier(0.895, 0.03, 0.685, 0.22); 
+    }
+    
+    .navbar-brand img{height:55px}
+    
+    #ama-nav{
+    box-shadow:0 0 10px rgba(0,0,0,.25);
+    bakground:#01579b !important;
+    z-index:1030 !important;
+    }
+
+
+/*
+* footer.css
+*/
+
+/*
+|-----------------------------------------
+| footer css (All footer CSS here)
+|-----------------------------------------
+*/
+.footer{
+/*background:#353A40;*/
+}
+
+.footer__social_icon{background:;flex-direction:row !important;color:grey;}
+.footer__social_icon ul{
+margin:0 5px;
+padding:0;
+display:flex;
+}
+.footer__social_icon ul li{
+list-style:none;
+margin:0 5px;
+}
+.footer__social_icon ul li a{
+position:relative;
+display:flex;
+justify-content:center;
+align-items:center;
+width:40px;
+height:40px;
+overflow:hidden;
+border-radius:50%;
+text-decoration:none;
+font-size:1.25rem;
+color:#fff;
+transition:all .5s;
+}
+
+.footer__social_icon ul li a .fa{
+transition:.5s;
+}
+footer__social_icon ul li a:hover{
+border:1px solid #fff;
+border-radius:50%;
+overflow:hidden;
+}
+.footer__social_icon ul li a:hover .fa{
+color:#fff;
+transform:scale(.85);
+}
+
+
+.footer__links a{
+margin:5px 10px;
+display:inline-block;
+color:#ccc !important;
+text-decoration:none;
+transition:.5s;
+}
+.footer__links a:hover{
+color:#fff !important;
+font-weight:bold;
+transform:translateX(3px);
+}
+
+.copyright {
+background:rgba(0,0,0,.35);
+ackground:#212429;
+color:grey;
+}
+/********************************************/
+
+
+
+
+
+body{
+	font-family:panton_bold;
+/*	background:url("../img/web/nat-landscape2.jpg") center/cover no-repeat fixed;*/
+}
+.page__wrapper {
+	overflow:hidden;
+}
+
+/**********************************************************/
+
+
+	
+
+
+/***************************************************************/
+
+/* Fixed Elements */ 
+
+.preloader{
+	position:fixed;
+	top:0;bottom:0;left:0;right:0;
+	z-index:9999;
+	background: #fff;
+	display:flex;
+	filter:grayscale(100%);
+	justify-content: center;
+	align-items:center;
+	filter:grayscale(100%);
+}
+.preloader__img{
+	box-shadow:0 0 5px 5px #eee;
+	max-width:128px;
+	opacity:.05;
+	z-index:2;
+}
+
+.preloader .rounder{
+position:fixed;
+background:transparent;
+width:150px;
+height:150px;
+border:5px dotted #fef;
+border-bottom-color:#fff;
+border-radius:50%;
+animation:rotate 1s linear infinite;
+}
+@keyframes rotate{
+0%{transform:rotate(0);}
+100%{transform:rotate(360deg);}
+}
+
+/*******************************************************/
